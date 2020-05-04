@@ -1,7 +1,23 @@
-<h1>ANSWER</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stupid coaching</title>
+</head>
+<body>
+  <h1>Stupid coaching</h1>
 
-<p>Your question: <%= params["question"] %></p>
+  <div>
+    <p><%= params["question"] %></p>
+    <p class="participant">- You</p>
+  </div>
 
-<p>Your coach answers: <%= @answer %></p>
+  <div>
+    <p id="coach"><%= @answer %></p>
+    <p class="participant">- Your coach</p>
+  </div>
 
-<p>Go back to ask formular: <%= link_to "by clicking here", ask_path %></p>
+  <p id="backlink"><%= link_to "Ask a new question", ask_path %></p>
+
+</body>
+</html>
